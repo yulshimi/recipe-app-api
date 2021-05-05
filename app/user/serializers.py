@@ -31,8 +31,6 @@ class AuthTokenSerializer(serializers.Serializer):
     )
     def validate(self, attrs):
         """Validate and authenticate the user"""
-        print('attrs is being printed out')
-        print(attrs)
         email = attrs.get('email')
         password = attrs.get('password')
         """context is the one directly passed to a serializer"""
